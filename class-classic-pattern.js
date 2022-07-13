@@ -25,7 +25,8 @@ class CLASSNAME {
 
     autostart_open_method() {
 
-        // this method is accessible from everywhere
+        // this method is accessible and can be launched
+		// from any position (inside and ouside class)
         // and can set (see set_private_field) and 
         // return open and private (see get_method_exemple) data
         // ...obvius, for do that, you need a return or callback system
@@ -45,6 +46,8 @@ class CLASSNAME {
     }
     
     get_method_exemple() {
+
+        // yes, you can return a private field via open method
 
         return [
             this.my_open_field, // return the open data, ok
