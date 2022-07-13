@@ -1,34 +1,36 @@
 //// this is an exemple of autopopulated class structure
 //// https://jsfiddle.net/nk2mfs0z/15/
 
-class PATHS
-{
+class PATHS {
 
 	constructor() { 
 
-		this.gethost();
+		this.gethost()
 
 	}
 
 	sethost(hostname) { 
 
-		if(!hostname) paths.host = "http://localhost/";
-		else paths.host = hostname;
+		if(!hostname) paths.host = "http://localhost/"
+		else paths.host = hostname
 
 	}
 
 	gethost() {
 
-		return paths.host;
+		return paths.host
 
 	}
 
 }
 
-const paths = {}, pathdata = new PATHS();
+const paths = {}
+const pathdata = new PATHS()
 
-pathdata.sethost("http://mysite.com/");
-alert(paths.host);
+// set prop
+pathdata.sethost("http://mysite.com/")
+console.log( paths.host )
 
-let actualhost = pathdata.gethost();
-alert(actualhost);
+// get prop
+let actualhost = pathdata.gethost()
+console.log( actualhost )
