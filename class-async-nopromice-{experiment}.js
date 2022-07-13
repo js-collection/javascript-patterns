@@ -1,3 +1,15 @@
+// more on: 
+//   https://stackoverflow.com/questions/36588775/are-javascript-promise-asynchronous?fbclid=IwAR1s4NciT18bJeJ1w0pkfQsiC7JBPixKdfpRcCVBuD1Pk_3_S7uUQHMF2SA
+//   https://www.geeksforgeeks.org/explain-promise-all-with-async-await-in-javascript/
+//   https://www.taniarascia.com/promise-all-with-async-await/
+//   https://www.w3schools.com/js/js_promise.asp
+//   https://www.w3schools.com/js/js_async.asp
+//   https://stackoverflow.com/questions/35612428/call-async-await-functions-in-parallel
+//   https://stackoverflow.com/questions/60092485/getting-parallel-async-await-to-work-javascript
+//   https://programmingwithswift.com/run-async-await-in-parallel-with-javascript/
+//   https://www.facebook.com/groups/javascript.developer.italiani/posts/1126531027899202/?comment_id=1126540347898270&reply_comment_id=1126549474564024&notif_id=1657712648486647&notif_t=group_comment_mention
+
+
 // async class experimental
 
 class myclass {
