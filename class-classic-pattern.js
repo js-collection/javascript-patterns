@@ -1,27 +1,58 @@
-class MYCLASSNAME
-{
+class CLASSNAME {
 
-	constructor()
-	{ 
-		this.myfunctionone();
-		this.myfunctiontwo();
+    #private_field; // <- if private, the field isn't an implicit variable, so you need to write it here
+
+	constructor() { 
+
+        // log "this" return the "class object"
+        // costructor lounch all inner element
+
+        this.my_open_field = {}
+        this.#private_field = {}
+
+		this.#autostart_private_method()
+        this.autostart_open_method()
+
+    }
+
+	#autostart_private_method() {
+
+        // this method is inaccessible from outside
+		this.my_open_field = "hello world!"
+        this.#private_field = "hello to me!"
+
 	}
 
-	myfunctionone()
-	{
-		this.mydata = String(window.location);
+    autostart_open_method() {
+
+        // this method is accessible from outside
+        // and can set (see set_private_field) and 
+        // return open and private (see get_method_exemple) data
+        // ...obvius, for do that, you need a return or callback system
+
+        this.my_open_field = "hello beautyful world!"
+        this.#private_field = "hello to you, dev!"
+
 	}
 
-	myfunctiontwo()
-	{
-		this.mydata = String(window.location);
-	}
+    set_private_field(str) {
 
-	myfree()
-	{
-		return mydata = String(window.location);
-	}
+        // yes, it's horrible but you can override
+        // a private field via open method
 
+        this.#private_field = str
+
+    }
+    
+    get_method_exemple() {
+
+        return [
+            this.my_open_field, // return the open data, ok
+            this.#private_field // return the private data, ops! wow!
+        ]
+
+	}
 
 }
-const myclassname = new MYCLASSNAME();
+
+const classistance = new CLASSNAME()
