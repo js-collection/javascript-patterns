@@ -5,6 +5,7 @@ class PATHS {
 
 	constructor() { 
 
+		this.sethost()
 		this.gethost()
 
 	}
