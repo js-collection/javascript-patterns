@@ -17,7 +17,7 @@ class CLASSNAME {
 
 	#autostart_private_method() {
 
-        // this method is inaccessible from outside
+        // this method is accessible into the class but not from outside
 		this.my_open_field = "hello world!"
         this.#private_field = "hello to me!"
 
@@ -25,7 +25,7 @@ class CLASSNAME {
 
     autostart_open_method() {
 
-        // this method is accessible from outside
+        // this method is accessible from everywhere
         // and can set (see set_private_field) and 
         // return open and private (see get_method_exemple) data
         // ...obvius, for do that, you need a return or callback system
