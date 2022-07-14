@@ -9,6 +9,10 @@
 //   https://stackoverflow.com/questions/60092485/getting-parallel-async-await-to-work-javascript
 //   https://programmingwithswift.com/run-async-await-in-parallel-with-javascript/
 //   https://www.facebook.com/groups/javascript.developer.italiani/posts/1126531027899202/?comment_id=1126540347898270&reply_comment_id=1126549474564024&notif_id=1657712648486647&notif_t=group_comment_mention
+//   https://hackernoon.com/async-await-generators-promises-51f1a6ceede2?fbclid=IwAR3nBDARZmOzjaZSmTcxb83iK8limyHsbBqk4PJpIijLpN6wQXOJ9sWrNic
+//   https://stackblitz.com/edit/react-wkt674?fbclid=IwAR09fuMQ2g42LbDdix-Ie6WV-mDckbhGG8N4y2vm-z35tulpU_s8rW2PAhU&file=src%2FApp.js
+//   https://stackblitz.com/edit/react-zimyso?fbclid=IwAR2tA6CjhElZ-YYzC8YqjXMDgG6HOV98qd4mmo-wqgE3vpF46LMCKwpUMxU&file=src%2FApp.js
+
 
 // async class experimental
 
