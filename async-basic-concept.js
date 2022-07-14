@@ -9,35 +9,40 @@
 
 
 const first_async = async () => {
-    console.log('- first 1');
-    console.log('- first 2');
-};
+
+    console.log('- first 1')
+    console.log('- first 2')
+
+}
 
 const middle_async = async () => {
-    console.log(
-        '- mid 0 ...without an await not exist a stop into the stack, async it s a simple "wait a result" '
-    );
-    await console.log('- mid 1 ...wait result in this func, do other func.');
-    console.log('- mid 2 ...moved last into the stack');
-    console.log('- mid 3 ...moved last into the stack');
-};
+
+    console.log('- mid 0 ...without an await not exist a stop into the stack, async it s a simple "wait a result" ')
+    await console.log('- mid 1 ...wait result in this func, do other func.')
+    console.log('- mid 2 ...moved last into the stack')
+    console.log('- mid 3 ...moved last into the stack')
+
+}
 
 const last_async = async () => {
-    console.log('- last 1');
-    console.log('- last 2');
-};
+
+    console.log('- last 1')
+    console.log('- last 2')
+
+}
 
 /* --- */
 
-first_async();
+first_async()
 
-console.log('----------');
+console.log('----------')
 
-middle_async();
+middle_async()
 
-console.log('----------');
+console.log('----------')
 
-last_async();
+last_async()
+
 
 
 // log:
