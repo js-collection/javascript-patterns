@@ -1,3 +1,4 @@
+// warning! this is currently wrong!
 
 // more on: 
 //   https://stackoverflow.com/questions/36588775/are-javascript-promise-asynchronous?fbclid=IwAR1s4NciT18bJeJ1w0pkfQsiC7JBPixKdfpRcCVBuD1Pk_3_S7uUQHMF2SA
