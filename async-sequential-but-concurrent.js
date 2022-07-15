@@ -3,6 +3,7 @@
 // async functions and the concurrently / simultaneous functions
 // a really good video for understand is: https://www.youtube.com/embed/vC6G7CZPCuY?start=194&end=292 (from 3:14 to 4:53)
 // and this git file: https://github.com/jsrt-project/common-js-patterns/blob/main/async-and-promise-advanced-concepts.js
+// and this: https://stackoverflow.com/a/67040756
 
 /* --- fake async */
 
