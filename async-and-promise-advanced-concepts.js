@@ -85,3 +85,11 @@ const concurrent = async () => {
 
 sequential()
 concurrent()
+
+
+// log:
+// run 1: 0ms -> 1000ms
+// run 2: 1000ms -> 1500ms
+// ["parallel 1: 0ms", "parallel 2: 0ms", "parallel 3: 0ms"]
+// resolved in: 2500ms
+// run 3: 1500ms -> 3500ms
