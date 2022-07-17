@@ -1,3 +1,8 @@
+// 
+// This is a brutal and inelegant, yet practical, version of building a classroom with asynchrons
+// 
+
+
 /* --- fake async task */
 
 
