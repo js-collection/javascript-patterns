@@ -52,13 +52,24 @@ async function initializeClass() {
   await myClassIstance.init();
   return myClassIstance;
 }
+
 export const MyClass = initializeClass();
 
 // how to use:
-// you can import script or class ex: import { MyClass } from './script.js';
-// and get/use it after loaded
-// MyClass.then(async (classReady) => {
-//   console.log('start ready data:', classReady);
-//   await classReady.produceTheSecondDataAsset('rewritten ');
-//   console.log('the refreshed data:', classReady);
-// });
+//
+// <script type="module" src="yourscriptwithclass.js">
+//     MyClass.then(async (classReady) => {
+//         await classReady.produceTheSecondDataAsset('rewritten ');
+//         console.log('the refreshed data:', classReady);
+//     });
+// </script>
+//
+// or
+//
+// <script type="module">
+//     import { MyClass } from './script.js';
+//     MyClass.then(async (classReady) => {
+//         await classReady.produceTheSecondDataAsset('rewritten ');
+//         console.log('the refreshed data:', classReady);
+//     });
+// </script>
