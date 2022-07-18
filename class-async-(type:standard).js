@@ -54,7 +54,6 @@ class myClass {
 
         //save result
         this.data['TEST02'] = [stack[ 0 ], stack[ 1 ], stack[ 2 ]]
-
         console.log('the second asset was produced')
 
         //return result
