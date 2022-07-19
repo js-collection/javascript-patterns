@@ -8,6 +8,12 @@ function simulateTask(delay, str) {
     );
 }
 
+/* --- unveil: anti debug bug */
+
+function unveil(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
 /* --- async class */
 
 class myClass {
@@ -71,13 +77,6 @@ async function initMyClass() {
 
 /*export*/ const myClassIstance = initMyClass()
 
-//
-//  warning debug bug:
-//  After you change a property, if you print an object without saying
-//  which property you want the updated object will always appear.
-//  This is a debugging printer problem, not is the class.
-//
-
 // how to use:
 // 
 // > if standard:
@@ -85,24 +84,20 @@ async function initMyClass() {
 // <script src="script.js"></script>
 // <script>
 //    myClassIstance.then( async classAsset => {
-//        console.log('the init test data:', classAsset)
+//        console.log('the init test data:', unveil(classAsset) )
 //        if(classAsset.data['TEST02'][0]=="task firsttest 2.1 completed"){
 //          classAsset.produceTheSecondDataAsset('rewritten ')
-//          console.log('the refreshed data:', classAsset)
+//          console.log('the refreshed data:', unveil(classAsset) )
 //        }
 //    })
 // </script>
 //
-// > if exportable:
-//
-// now you can import where you want the base and work with the assets
-// <script type="module">
-//     import { myClassIstance } from 'script.js';
-//     myClassIstance.then( async classAsset => {
-//        console.log('the init test data:', classAsset)
-//        if(classAsset.data['TEST02'][0]=="task firsttest 2.1 completed"){
-//          await classAsset.MYCLASSMETHOD('METHODOPTIONS');
-//          console.log('the refreshed data:', classAsset);
-//        }
-//     });
-// </script>
+// unveil method note:
+//      If you try to print an object in console and then edit it, that
+//      object will only appear as in the latest update. Hence, you can
+//      no longer read the previous status. It is a purely visual phenomenon
+//      (the state, if called by navigating the object, is then legible).
+//      This is a known browser debugging bug. To work around you can use the
+//      unveil (obj) method. Without it, you will only be able to see your
+//      latest status. Exemple: console.log( unveil(classAsset) ).
+//      read more on: https://stackoverflow.com/q/4057440/19579604
