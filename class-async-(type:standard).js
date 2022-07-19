@@ -8,18 +8,17 @@ function simulateTask(delay, str) {
     );
 }
 
-/* --- unveil: anti debug bug */
-
-function unveil(obj) {
-  return JSON.parse(JSON.stringify(obj));
-}
-
 /* --- async class */
 
 class myClass {
 
     constructor() {
         this.data = {}
+        this.unveil = (obj) => { 
+            return      obj && typeof obj == Array ? obj.toString().split(',')
+                    :   obj && typeof obj == Object ? JSON.parse(JSON.stringify(obj))
+                    :   'unveil requires an object or an array'
+        }
     }
 
     async init() {
