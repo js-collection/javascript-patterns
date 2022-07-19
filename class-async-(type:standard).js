@@ -96,5 +96,5 @@ async function initMyClass() {
 //      (the state, if called by navigating the object, is then legible).
 //      This is a known browser debugging bug. To work around you can use the
 //      unveil (obj) method. Without it, you will only be able to see your
-//      latest status. Exemple: console.log( unveil(classAsset) ).
+//      latest status. Exemple: console.log( classAsset.unveil(classAsset) ).
 //      read more on: https://stackoverflow.com/q/4057440/19579604
