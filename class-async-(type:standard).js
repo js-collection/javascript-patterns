@@ -15,9 +15,7 @@ class myClass {
     constructor() {
         this.data = {}
         this.unveil = (obj) => { 
-            return      obj && typeof obj == Array ? obj.toString().split(',')
-                    :   obj && typeof obj == Object ? JSON.parse(JSON.stringify(obj))
-                    :   'unveil requires an object or an array'
+            return obj ? JSON.parse(JSON.stringify(obj)) : 'unveil requires an object or an array'
         }
     }
 
